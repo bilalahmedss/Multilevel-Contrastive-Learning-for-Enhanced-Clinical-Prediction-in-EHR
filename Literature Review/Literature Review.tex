@@ -1,0 +1,316 @@
+\documentclass[a4paper]{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+    \begin{center}
+        \includegraphics[width=10cm]{LOGOHABIB.png}
+        \\
+        \vspace{5mm}
+        {\huge \textbf{Computer Vision}} \\ % Title
+        \vspace{7mm}
+        {\LARGE \textbf{Detailed Literature Review}} \\ % Subtitle
+        \vspace{15mm}
+        {\Large \textbf{``Multilevel Contrastive Learning for Enhanced Clinical Prediction in Electronic Health Records''}}\\
+        \vspace{70mm}
+        \begin{minipage}{0.7\textwidth}
+            \begin{tabular}{rlr}
+                {\large \textbf{Name:}}            & {\large Bilal Ahmed}       & {\large (ba08018)} \\[2mm]
+                {\large \textbf{Class:}}           & {\large 2026}              &                    \\[3mm]
+                {\large \textbf{Instructor:}}      & {\large Muhammad Farhan}   &                    \\[3mm]
+                {\large \textbf{Submission Date:}} & {\large 6th December 2024} &
+            \end{tabular}
+        \end{minipage}
+        \vfill % Center the title content vertically
+    \end{center}
+    \newpage
+    \tableofcontents
+    \clearpage
+
+    \section{Introduction}
+
+    \subsection{Purpose and Scope}
+    The purpose of this review is to examine advancements in contrastive learning
+    for clinical predictions using Electronic Health Records (EHRs), focusing on
+    three key articles: FairEHR-CLP, Contrastive Learning-based Imputation-Prediction
+    Networks, and SCEHR. The scope includes the application of contrastive
+    learning to improve accuracy, fairness, and data imputation in clinical
+    prediction tasks. These studies highlight methodologies for leveraging multimodal
+    data and mitigating biases, critical for developing enhanced predictive
+    models.
+
+    \subsection{Relevance}
+    The reviewed studies are directly relevant to our project titled \textit{Multilevel
+    Contrastive Learning for Enhanced Clinical Prediction in Electronic Health
+    Records}. They provide insights into applying contrastive learning
+    techniques to address data heterogeneity, fairness concerns, and predictive
+    accuracy and it challenges central to modern EHR-based clinical prediction
+    models.
+
+    \subsection{Organization}
+    The review begins by outlining the search and selection criteria used to
+    identify the three articles, followed by a thematic and methodological discussion.
+    A critical analysis highlights key findings, strengths, and limitations. The
+    relevance of these works to the research question is established, and the
+    synthesis section integrates these findings into broader trends. Finally,
+    the review concludes with a summary and identification of gaps for future
+    work.
+
+    \section{Search and Selection Criteria}
+
+    \subsection{Search Strategy}
+    A targeted search was conducted on academic databases such as arXiv and PubMed.
+    Keywords included "contrastive learning," "clinical prediction," "multimodal
+    EHR," and "fairness in AI." Articles published between 2021 and 2024 were
+    prioritized to ensure the inclusion of recent advancements.
+
+    \subsection{Inclusion/Exclusion Criteria}
+    \textbf{Inclusion Criteria:}
+    \begin{itemize}
+        \item Studies employing contrastive learning for clinical prediction tasks.
+
+        \item Research incorporating multimodal EHR data.
+
+        \item Articles addressing fairness or data imputation in predictive models.
+    \end{itemize}
+    \textbf{Exclusion Criteria:}
+    \begin{itemize}
+        \item Studies focused solely on unimodal data.
+
+        \item Papers lacking a rigorous methodological framework or experimental
+            validation.
+    \end{itemize}
+
+    \subsection{Scope of Literature}
+    The selected articles explore three critical areas: fairness-aware
+    contrastive learning (FairEHR-CLP), data imputation for mortality risk prediction
+    (Contrastive Learning-based Imputation-Prediction Networks), and supervised
+    contrastive learning for longitudinal EHR data (SCEHR).
+
+    \section{Thematic or Chronological Organization}
+
+    \subsection{Chronological}
+    The articles span from 2021 to 2024, reflecting the evolution of contrastive
+    learning methodologies in healthcare:
+    \begin{itemize}
+        \item SCEHR (2021) introduces supervised contrastive learning for EHR-based
+            risk prediction.
+
+        \item Contrastive Learning-based Imputation-Prediction Networks (2023) focuses
+            on addressing data irregularities and missing values in EHR datasets.
+
+        \item FairEHR-CLP (2024) emphasizes fairness-aware contrastive learning across
+            multimodal EHR data.
+    \end{itemize}
+
+    \subsection{Thematic}
+    Thematically, the studies can be categorized as:
+    \begin{itemize}
+        \item \textbf{Fairness in Clinical Predictions:} FairEHR-CLP addresses
+            demographic bias and ensures equitable outcomes.
+
+        \item \textbf{Data Imputation:} The Imputation-Prediction framework
+            integrates imputation with prediction tasks to handle missing data.
+
+        \item \textbf{Representation Learning:} SCEHR focuses on representation
+            learning for longitudinal EHR data using supervised contrastive
+            regularization.
+    \end{itemize}
+
+    \subsection{Methodological}
+    All three articles use contrastive learning, but with distinct
+    methodological focuses:
+    \begin{itemize}
+        \item FairEHR-CLP uses counterfactual patient generation to mitigate demographic
+            biases.
+
+        \item The Imputation-Prediction Network integrates graph-based patient stratification
+            for data imputation.
+
+        \item SCEHR introduces a composite loss function to address data imbalance
+            in classification tasks.
+    \end{itemize}
+
+    \section{Critical Analysis}
+
+    \subsection{Summarize}
+    FairEHR-CLP provides a fairness-aware framework by generating counterfactual
+    patient representations to align embeddings across demographic attributes while
+    preserving clinical information. Using a fairness-aware loss function, it mitigates
+    demographic bias, ensuring equitable outcomes for sensitive groups such as
+    gender and ethnicity, making it impactful for fair healthcare delivery.
+
+    The Imputation-Prediction framework tackles missing data and irregular time intervals
+    in EHR datasets by leveraging graph-based patient stratification to enhance imputation
+    accuracy. Contrastive learning improves patient data representation, leading
+    to reliable and accurate mortality risk predictions, offering a dual focus
+    on imputation and prediction.
+
+    SCEHR applies supervised contrastive learning for longitudinal EHR data, introducing
+    a composite loss function to address data imbalance. This framework improves
+    classification tasks such as in-hospital mortality prediction and patient
+    phenotyping, validated across multiple datasets.
+
+    \subsection{Compare and Contrast}
+    FairEHR-CLP emphasizes fairness by addressing demographic biases and ensuring
+    equitable predictions across different patient groups. Its primary
+    innovation lies in the generation of counterfactual patient representations,
+    making it unique among the three frameworks. However, its focus on fairness means
+    that it does not address other challenges such as data imputation or irregular
+    time intervals.
+
+    The Imputation-Prediction framework focuses on data quality, specifically
+    missing values and irregular time intervals, which are major challenges in EHR
+    datasets. Unlike FairEHR-CLP, it does not address fairness explicitly but instead
+    improves predictive accuracy by leveraging patient stratification and graph-based
+    methodologies. This framework bridges the gap between imputation and
+    prediction, enabling a comprehensive approach to handling data irregularities.
+
+    SCEHR takes a different approach by addressing data imbalance through supervised
+    contrastive learning. Unlike the other two frameworks, SCEHR focuses on binary
+    and multi-label classification tasks, primarily improving representation
+    learning in longitudinal EHR data. While it effectively enhances predictive performance,
+    it lacks the fairness and data quality aspects emphasized in FairEHR-CLP and
+    the Imputation-Prediction framework.
+
+    Overall, all three frameworks leverage contrastive learning but apply it to distinct
+    challenges—fairness (FairEHR-CLP), data quality (Imputation-Prediction Network),
+    and representation learning in imbalanced datasets (SCEHR). These
+    differences highlight the versatility of contrastive learning in addressing
+    diverse challenges in clinical prediction.
+
+    \subsection{Strengths and Weaknesses}
+    \textbf{Strengths:}
+    \begin{itemize}
+        \item \textbf{FairEHR-CLP:}
+            \begin{itemize}
+                \item Innovative use of counterfactual patient generation to address
+                    demographic bias.
+
+                \item Robust fairness-aware loss function combining contrastive learning
+                    with demographic regularization.
+
+                \item Demonstrated effectiveness in mitigating biases across sensitive
+                    attributes such as gender and ethnicity.
+            \end{itemize}
+
+        \item \textbf{Imputation-Prediction Network:}
+            \begin{itemize}
+                \item Novel integration of imputation and prediction tasks,
+                    addressing missing data and irregular time intervals.
+
+                \item Graph-based patient stratification enhances the quality of
+                    imputed data.
+
+                \item Improves predictive accuracy by leveraging contrastive learning
+                    for better patient representation.
+            \end{itemize}
+
+        \item \textbf{SCEHR:}
+            \begin{itemize}
+                \item Effective handling of imbalanced data through supervised contrastive
+                    loss functions.
+
+                \item Demonstrated scalability and performance on multiple clinical
+                    datasets.
+
+                \item Improves binary and multi-label classification tasks in longitudinal
+                    EHR data.
+            \end{itemize}
+    \end{itemize}
+
+    \textbf{Weaknesses:}
+    \begin{itemize}
+        \item \textbf{FairEHR-CLP:}
+            \begin{itemize}
+                \item Limited to addressing demographic biases; does not account
+                    for institutional or systemic biases.
+
+                \item Requires validation on more diverse datasets to ensure generalizability.
+            \end{itemize}
+
+        \item \textbf{Imputation-Prediction Network:}
+            \begin{itemize}
+                \item Computationally expensive due to graph-based patient stratification.
+
+                \item Limited scalability for very large datasets with high levels
+                    of missingness.
+            \end{itemize}
+
+        \item \textbf{SCEHR:}
+            \begin{itemize}
+                \item Focused primarily on classification tasks, lacking
+                    integration with fairness-aware or imputation-focused
+                    methods.
+
+                \item Does not explicitly address challenges associated with multimodal
+                    EHR data.
+            \end{itemize}
+    \end{itemize}
+
+    \subsection{Identify Gaps}
+    While these frameworks provide significant advancements, they also reveal gaps
+    in current research. FairEHR-CLP is limited to addressing demographic biases
+    and does not consider other types of biases, such as those stemming from institutional
+    or systemic factors. The Imputation-Prediction framework, while innovative,
+    lacks fairness considerations and may face scalability challenges for large-scale
+    datasets. SCEHR effectively handles data imbalance but does not integrate multimodal
+    data or address fairness and data quality comprehensively. Future research
+    should focus on developing unified frameworks that integrate fairness, data imputation,
+    and multimodal learning while ensuring scalability and generalizability
+    across diverse healthcare settings.
+
+    \section{Relevance to Your Research}
+
+    \subsection{Link to Research Question}
+    These studies provide foundational insights into applying multilevel contrastive
+    learning for clinical prediction, directly supporting the goals of this
+    project.
+
+    \subsection{Conceptual Framework}
+    The FairEHR-CLP framework's fairness-aware loss functions and counterfactual
+    generation serve as a conceptual basis for multilevel approaches. The Imputation-Prediction
+    Network’s handling of data irregularities offers inspiration for integrating
+    imputation tasks into multilevel learning.
+
+    \section{Synthesis}
+
+    \subsection{Integration}
+    The reviewed articles demonstrate the integration of contrastive learning
+    with fairness-aware, imputation-focused, and representation learning
+    frameworks to address unique challenges in clinical predictions.
+
+    \subsection{Trend Analysis}
+    A clear trend is observed toward proactive bias mitigation, robust data representation,
+    and multimodal integration using contrastive learning techniques in
+    healthcare.
+
+    \section{Citations and References}
+
+    \subsection{Comprehensive Referencing}
+    \begin{itemize}
+        \item Wang, Y., Pillai, M., Zhao, Y., Curtin, C., \& Hernandez-Boussard,
+            T. (2024). FairEHR-CLP: Towards Fairness-Aware Clinical Predictions with
+            Contrastive Learning in Multimodal Electronic Health Records.
+            \textit{arXiv preprint}. Retrieved from
+            \url{https://arxiv.org/abs/2402.00955}
+
+        \item Liu, Y., Zhang, Z., Qin, S., Salim, F. D., \& Yepes, A. J. (2023).
+            Contrastive Learning-based Imputation-Prediction Networks for In-hospital
+            Mortality Risk Modeling using EHRs. \textit{arXiv preprint}. Retrieved
+            from \url{https://arxiv.org/abs/2308.09896}
+
+        \item Zang, C., \& Wang, F. (2021). SCEHR: Supervised Contrastive
+            Learning for Clinical Risk Prediction using Electronic Health
+            Records. \textit{arXiv preprint}. Retrieved from \url{https://arxiv.org/abs/2110.04943}
+    \end{itemize}
+
+    \subsection{Acknowledgment of ChatGPT Use}
+    The summaries and rephrased content for this literature review were
+    generated and refined with the assistance of ChatGPT. ChatGPT was used to enhance
+    understanding, streamline the summarization process, and ensure clarity in presenting
+    complex methodologies. While the content reflects the author's
+    interpretation, ChatGPT played a supportive role in articulating the analysis
+    more effectively.
+\end{document}
